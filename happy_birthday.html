@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday with Canvas</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: lightblue;
+        }
+        #turtle-canvas {
+            border: 1px solid black;
+            margin: 20px auto;
+            display: block;
+        }
+        #start-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #start-button:hover {
+            background-color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday with Canvas</h1>
+    <canvas id="turtle-canvas" width="800" height="600"></canvas>
+    <br>
+    <button id="start-button">Start</button>
+    <script>
+        document.getElementById('start-button').addEventListener('click', function() {
+            var canvas = document.getElementById('turtle-canvas');
+            var ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+            ctx.fillStyle = 'purple';
+            ctx.font = '48px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Happy Birthday!', canvas.width / 2, canvas.height / 2);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
